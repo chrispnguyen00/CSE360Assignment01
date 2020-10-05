@@ -1,8 +1,13 @@
+/**
+ * Name: Chris Nguyen
+ * ID: 1214641077
+ * Class Time: TH 9am - 10:15am
+ */
 package cse360assignment01;
 
 public class AddingMachine {
 	  private int total;
-	  private StringBuffer str;
+	  private String str;
 	  
 	  /**
 	   * This is the constructor where I initialized the two private
@@ -10,7 +15,7 @@ public class AddingMachine {
 	   */
 	  public AddingMachine() {
 		  total = 0;
-		  str = new StringBuffer("0");
+		  str = "0";
 	  }
 	  
 	  /**
@@ -25,8 +30,7 @@ public class AddingMachine {
 	   */
 	  public void add (int value) {
 		  total += value;
-		  str.append(" + " + value);
-		  
+		  str += " + " + value;
 	  }
 
 	  /**
@@ -34,7 +38,7 @@ public class AddingMachine {
 	   */
 	  public void subtract (int value) {
 		  total -= value;
-		  str.append(" - " + value);
+		  str += " - " + value;
 	  }
 
 	  /**
@@ -42,8 +46,7 @@ public class AddingMachine {
 	   * then the symbols add or subtract and the value and so on.
 	   */
 	  public String toString () {
-		  System.out.println(str);
-		  return "";
+		  return str;
 	  }
 	  
 	  /**
@@ -52,8 +55,21 @@ public class AddingMachine {
 	   */
 	  public void clear() {
 		  total = 0;
-		  str = new StringBuffer("0");
+		  str = "0";
 		  
 	  }
+	  
+	  /*
+	  public static void main(String[] args) {
+		  AddingMachine myCalculator = new AddingMachine();
+		  myCalculator.add(4);
+		  myCalculator.subtract(2);
+		  myCalculator.add(5);
+		  //System.out.println(myCalculator.toString());
+		  
+		  myCalculator.clear();
+		  System.out.println(myCalculator.toString());
+	  }
+	  */
 }
 
